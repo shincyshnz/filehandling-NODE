@@ -78,3 +78,15 @@ This is a simple project aims at learning concepts of NodeJs Modules and creatin
 - Install NodeJs
 - Install npm: `npm init`
 - Install Nodemon:`npm install nodemon -D`
+- Go to `package.json` and rewrite the scripts as
+
+  ```
+  "scripts": {
+  "dev": "nodemon index.js",
+  "start": "node index.js"
+  }`
+
+  ```
+
+- Start the server: `npm run dev`
+- Files other than `index.js` can be run using : `node <filename.js>`
