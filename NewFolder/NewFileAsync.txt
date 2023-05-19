@@ -1,2 +1,0 @@
-This is a plain text.
-This is an appended text.

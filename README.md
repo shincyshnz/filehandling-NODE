@@ -70,7 +70,7 @@ myModule.myFunction2(); // logs 'Hello from myFunction2!'
 
 # Project
 
-This is a simple project aims at learning concepts of NodeJs Modules and creating server.
+This is a simple project aims at learning concepts of NodeJs Modules, FileHandling and creating server.
 
 ## How to use?
 

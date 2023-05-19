@@ -18,17 +18,28 @@ const fs = require("fs");
 // console.log(path.basename(__filename));
 // console.log(path.parse(__filename));
 
+///////// SYNC FILE HANDLING ////////////
 
 
-// create a file : run code only once then comment
+
+///////// ASYNC FILE HANDLING ////////////
+
+// file exists or not
 ////////////////////////////////////////
+// fs.access('./NewFolder', (err) => {
+//     (err)
+//         ? console.log(err)
+//         : console.log("Success : File exists.\n");
+// });
 
+
+// Create a Folder 
+////////////////////////////////////////
 fs.mkdir('./NewFolder', (err) => {
     (err)
         ? console.log(err)
         : console.log("Success : Folder Created.\n");
 });
-
 
 // writeFile
 ////////////////////////////////////////////////////////
@@ -72,9 +83,16 @@ fs.rename('./NewFolder/NewFile.txt', './NewFolder/NewFileAsync.txt', (err) => {
     err ? console.log(err) : console.log("Success : Renamed the file");
 });
 
-// Read files in the directory after renaming
+// Delete File
 ////////////////////////////////////////////////////////
 
-fs.readdir('./NewFolder', (err, files) => {
-    err ? console.log(err) : console.log(files, "=== Files inside the directory after renaming.\n");
+fs.unlink('./NewFolder/NewFileAsync.txt', (err) => {
+    err ? console.log(err) : console.log("Success: File Deleted.\n");
+});
+
+// Delete Folder
+////////////////////////////////////////////////////////
+
+fs.rmdir('./NewFolder', (err) => {
+    err ? console.log(err) : console.log("Success: Folder Deleted.\n");
 });
